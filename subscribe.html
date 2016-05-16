@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Contact</title>
+<meta charset="iso-8859-1">
+<link rel="stylesheet" href="styles/contact.css" type="text/css">
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1> <a href="/"><img src="Images/black and white logo.png" alt="logo" width="150px" height="50px"></a></h1>
+    </div>
+    <nav>
+        <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="Flavours.html">Flavours</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Locations.html">Locations</a></li>
+        <li class="last"><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  
+  <!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <section id="shout">
+      <p>Subscribe</p>
+    </section>
+    <!-- main content -->
+    <div id="homepage">
+      <!-- One Quarter -->
+      <section id="latest">
+        <article>
+        <center>
+        <img src="Images/strawbery margarita.gif" height="400">
+        <p> <h1>Get updates on the latest recipes and events</h1>
+
+
+<form action="//submit.form" id="NewsletterSubscription100" method="post" onsubmit="return ValidateForm(this);">
+<script type="text/javascript">
+    function ValidateForm(frm) {
+        if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
+        if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
+        if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
+        return true;
+    }
+</script>
+<table border="0" cellpadding="5" cellspacing="0" style="width: 360px; margin: auto; text-align: left;">
+<tr> <td>
+<label for="Name">NAME</label><br />
+<input name="Name" type="text" maxlength="60" style="width: 340px;" />
+</td> </tr> <tr> <td>
+<label for="FromEmailAddress">EMAIL</label><br />
+<input name="FromEmailAddress" type="text" maxlength="60" style="width: 340px;" />
+</td> </tr> <tr> <td align="center">
+<input id="skip_Submit" name="skip_Submit" type="submit" value="SUBSCRIBE" />
+</td> </tr>
+</table>
+</form></p>      
+          </figure>
+        </article>
+      </section>
+      
+
+        
+        <!-- spacer - clearer -->
+        <div class="spacer"></div>
+        
+    
+        
+      
+      </section>
+      
+      <!-- / services area -->
+    </div>
+    <!-- / content body -->
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; Kelly Washington Design - <a href="http://www.behnace.com/kellywashington">Behance</a></p>
+  </footer>
+</div>
+</body>
+</html>

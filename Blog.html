@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Blog</title>
+<link href="styles/blog.css" rel="stylesheet" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+
+<script>
+var feed = new Instafeed({
+get: 'tagged',
+tagName: 'margaritas',
+clientId: '91178e5ab42c42ebbf19ce155142a94b',
+limit: '24'
+});
+feed.run();
+</script>
+
+</head>
+
+<body>
+
+
+
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1> <a href="/"><img src="Images/black and white logo.png" alt="logo" width="150px" height="50px"></a></h1>
+    </div>
+    <nav>
+       <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="Flavours.html">Flavours</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Locations.html">Locations</a></li>
+        <li class="last"><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  
+  <!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <section id="shout">
+      <p>Instagram Feed</p>
+    </section>
+    <!-- main content -->
+    <div id="homepage">
+      <!-- One Quarter -->
+      <section id="latest">
+        <article>
+        <center><p></p></center>     
+          </figure>
+        </article>
+      </section>
+      
+
+        
+        <!-- spacer - clearer -->
+      <div class="spacer"></div>
+        
+        <!-- / spacer - clearer -->
+        <div id="instafeed"></div>
+
+      
+      </section>
+      
+      <!-- / services area -->
+    </div>
+    <!-- / content body -->
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; Kelly Washington Design - <a href="http://www.behnace.com/kellywashington">Behance</a></p>
+  </footer>
+</div>
+
+</body>
+</html>

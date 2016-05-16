@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Locations</title>
+<meta charset="iso-8859-1">
+<link rel="stylesheet" href="styles/Locations.css" type="text/css">
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+</head>
+<body>
+
+
+<div class="map"><script>
+var myCenter=new google.maps.LatLng(40.742425,-73.984335);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+ 
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+ var locations = [
+ 			['Dos Caminos',40.742425,-73.984335],
+            ['El Camion Cantina', 40.729139, -73.981098],
+            ['La Contenta', 40.718761, -73.986939],
+            ['Casa Agave NYC', 40.762110, -73.990245],
+            ['Noche de Margaritas', 40.780116, -73.949816],
+            ['Las Margaritas', 40.759420, -73.919508]
+        ];
+
+
+        //declare infowindow
+        var infowindow = new google.maps.InfoWindow();
+
+        //add marker to each locations
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map,
+            });
+
+            //click function to marker, pops up infowindow
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script></div>
+
+
+
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1> <a href="/"><img src="Images/black and white logo.png" alt="logo" width="150px" height="50px"></a></h1>
+    </div>
+    <nav>
+        <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="Flavours.html">Flavours</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Locations.html">Locations</a></li>
+        <li class="last"><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  
+  <!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <section id="shout">
+      <p>Locations</p>
+    </section>
+    <!-- main content -->
+    <div id="homepage">
+      <!-- One Quarter -->
+      <section id="latest">
+        <article>
+        <center><p> Looking for a place to grab margaritas? Here are some of the best locations in the city for that tho(ugh)t juice craving! </p></center>
+           
+          </figure>
+        </article>
+      </section>
+     
+        
+<center><div id="googleMap" style="width:500px;height:380px;"></div></center>
+        
+      
+      </section>
+      
+      <!-- / services area -->
+    </div>
+    <!-- / content body -->
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; Kelly Washington Design - <a href="http://www.behnace.com/kellywashington">Behance</a></p>
+  </footer>
+</div>
+</body>
+</html>
